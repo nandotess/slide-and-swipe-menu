@@ -68,6 +68,11 @@
 
 				e.preventDefault();
 			});
+
+			$(window).on('resize', function() {
+				self.navWidth = - self.nav.outerWidth();
+				self.hideNavigation();
+			});
 		},
 
 		/**
@@ -150,9 +155,9 @@
 			}
 
 			if (this.isSafari() || this.isChrome()) {
-			   this.nav.css('-webkit-transform', 'translate(' + distance + 'px,0)');
+			   this.nav.css('-webkit-transform', 'translate(' + distance + 'px, 0)');
 			} else{
-			   this.nav.css('transform', 'translate(' + distance + 'px,0)');
+			   this.nav.css('transform', 'translate(' + distance + 'px, 0)');
 			}
 
 			if (distance == '0') {
