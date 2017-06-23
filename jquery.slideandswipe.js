@@ -51,6 +51,8 @@
 			}
 
 			this.navCta = $('.ssm-toggle-nav' + this.navRel);
+			this.overlay = $('.ssm-overlay' + this.navRel);
+			this.closeCta = $('.ssm-close-btn' + this.navRel);
 
 			this.settings.swipeStatus = this.swipeStatus;
 			this.nav.swipe(this.settings);
@@ -155,8 +157,9 @@
 
 			if (distance == '0') {
 				this.navCta.addClass('ssm-nav-visible');
-				$('html').addClass('is-navOpen');
-				$('.ssm-overlay').fadeIn();
+				$('html').addClass('ssm-nav-is-open');
+				this.overlay.fadeIn();
+				this.closeCta.fadeIn();
 			}
 		},
 
@@ -166,8 +169,9 @@
 		hideNavigation: function() {
 			this.nav.removeClass('ssm-nav-visible');
 			this.scrollNav(this.navWidth, this.settings.speed);
-			$('html').removeClass('is-navOpen');
-			$('.ssm-overlay').fadeOut();
+			$('html').removeClass('ssm-nav-is-open');
+			this.overlay.fadeOut();
+			this.closeCta.fadeOut();
 		},
 
 		/**
