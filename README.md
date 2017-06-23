@@ -6,6 +6,7 @@ Forked from [github.com/JoanClaret/slide-and-swipe-menu](https://github.com/Joan
 * Added Sublime Text project settings
 * Added Gulp integration
 * Added build file and integrated with Sublime Text project (command+B on Mac)
+* Added .editorconfig
 
 ## Library changes
 * Plugin entire recoded with jQuery plugin development boilerplate: [github.com/jquery-boilerplate/jquery-boilerplate](https://github.com/jquery-boilerplate/jquery-boilerplate)
